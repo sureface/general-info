@@ -8,7 +8,6 @@
     box-sizing: border-box;
     font-family: openSansSemiBold;
 }
-
 body {
     padding: 20px;
 }
@@ -93,6 +92,11 @@ body {
 }
 .driverFullDetails_item {
     border-bottom: 1px solid var(--light-gray);
+    display: grid;
+    grid-template-columns: 241px 241px 197px; 
+    gap: 20px;
+    padding-bottom: 18px;
+    justify-content: space-between;
 }
 .driverFullDetails_item:last-child {
     border-bottom: none;
@@ -117,12 +121,12 @@ body {
 }
 .driverFullDetails-action {
     position: absolute;
-    top: 2px;
+    top: 15px;
     right: 16px;
     display: flex;
     align-items: center;
 }
-.driverFullDetails_item-status {
+.driverFullDetails_item-status {       
     border-radius: 20px;
     background: var(--light-green);
     padding: 2px 16px;
@@ -140,13 +144,13 @@ body {
 }
 .driverFullDetails_item-body {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 260px 260px;
     gap: 33px;
+    row-gap: 0;
+    align-items: center;
+    justify-content: center;
 }
-.driverFullDetails_item-right {
-    grid-column: 2 / span 2;
-}
-.driverFullDetails_item-left .driverFullDetails_item-text {
+.driverFullDetails_item-body_left .driverFullDetails_item-text {
     color: var(--dark-gray, #717171);
     text-align: right;
     font-size: 0.875rem;
@@ -155,10 +159,10 @@ body {
     margin-bottom: 6px;
     margin-top: 2px;
 }
-.driverFullDetails_item-left .driverFullDetails_item-text:last-child{
+.driverFullDetails_item-body_left .driverFullDetails_item-text:last-child{
     margin-bottom: 15px;
 }
-.driverFullDetails_item-right .driverFullDetails_item-text {
+.driverFullDetails_item-body_right .driverFullDetails_item-text {
     color: var(--black);
     font-size: 1.125rem;
     line-height: 140%;
@@ -167,4 +171,36 @@ body {
 .driverFullDetails_item-subtext {
     font-style: italic;
     color: var(--dark-gray);
+}
+.driverFullDetails_item-left {
+    grid-column: span 2;
+}
+.driverFullDetails_item-text_left p {
+    text-align: right;
+    color: var(--dark-gray);
+    padding-top: 2px;
+}
+.driverFullDetails_item-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+}
+.driverFullDetails_item-right {
+    padding-right: 34px;
+    padding-top: 15px;
+}
+.driverFullDetails_item-text_header {
+    color: var(--dark-gray);
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 140%;
+    text-transform: capitalize;
+}
+.driverFullDetails_item-text_right {
+    color: var(--black);
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 140%;
+    text-transform: capitalize;
+    word-break: break-all;
 }
