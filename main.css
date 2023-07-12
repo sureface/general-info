@@ -144,11 +144,10 @@ body {
 }
 .driverFullDetails_item-body {
     display: grid;
-    grid-template-columns: 260px 260px;
+    grid-template-columns: 200px auto;
     gap: 33px;
     row-gap: 0;
     align-items: center;
-    justify-content: center;
 }
 .driverFullDetails_item-body_left .driverFullDetails_item-text {
     color: var(--dark-gray, #717171);
@@ -179,6 +178,7 @@ body {
     text-align: right;
     color: var(--dark-gray);
     padding-top: 2px;
+    font-size: 0.875rem;
 }
 .driverFullDetails_item-text {
     display: flex;
